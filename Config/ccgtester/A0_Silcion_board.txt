@@ -1,0 +1,42 @@
+;=C:\Work\tools\ccgtester\A0_Silcion_board.txt
+;****Version: FX3G2 Validation Ver: 0.26 Build: 09 Date: 04-08-2024
+;****Date: 06/07/2024 17:48:02
+
+HEX_FILE: fx3g2_cm4.hex
+LcmdClk:2                                 ; 0:Off,1:625,2:156,3:148,4:74MHz|Lvcmos5:160,6:100,7:80
+LcmdThd:0                                 ; 0:th0(port0),1:th1(port0),2:th2(port1),3:th3(port1)
+LcmdGear:1                                ; 0:11,1:21,2:41,3:81 | LVCMOS_EM 2:11,3:21
+LcmdLane:0                                ; [0:4]=1,2,4,8,12,16|LVCMOS[0:3]=8,16,24,32|SF[5:6]=2bit,5bit
+LcmdSck:0                                 ;  0:0-7
+LcmdDP:2                                  ;   0:INC,1:PRBS,2:W1,3:CB480,4:CB720,5:CB1280,6:CB4K,7:RFM
+LcmdCTL:2                                 ;  0:VCMD,1:EP1,2:Stream,3:LVCMOS_TX (Test Control)
+DpMask0:1                                 ;  0:CB480|Walking1|PRBS|INC
+LaneMsk:0xF                               ;  0:[L3|L2|L1|L0] Mask bits
+GearMsk:2                                 ;  0:8:1|4:1|2:1|1:1
+Lane12:0                                  ;   1:Test Enable, 0:Disable
+SckThMsk:0                                ; 0:off, 1:SckTest Enable,2:ThreadEnable, 3:both enable
+IO_Level:2                                ; 0:5V,1:3.3V,2:1.8V,3:1.2V
+Flash_Row_Size:3                          ; 0:64,1:128,2:256,3:512,4:1K,5:2K,6:4K,7:RSVD
+FlashSize:5                               ; 0:CCGxFamily,1:32K,2:64K,3:128K,4:256K,5:512K,6:1M,7:2M
+RowsPerArray:0                            ; 0:256, 1:512
+VBusEn:0                                  ; 0: 0=Disable/1=Enable VBUS check (Application FW ONLY)
+CpuSpeed:0                                ;  0: 75MHz,1: 50MHz
+DMA_Clock:0                               ; 0,6,7:240MHz,1:160,2:120,3:150,4:312.5/125,5:156.25MHz
+NumEndpoint:3                             ; 0-15 Number of non-zero Endpoints
+IsoPayLoad:3                              ; 0:128,1:256,2:512,3:1024
+IsoXferSize:3                             ;  0:8K,1:16K,2:32K,3:64K (ISO total transfer Size)
+IsoDmaSize:1                              ;   0:4K,1:8K,2:16K,3:32K (Application FW ONLY)
+BulkPayLoad:3                             ;  0:128,1:256,2:512,3:1024
+BulkXferSize:3                            ; 0:8K,1:16K,2:32K,3:64K (BULK total transfer Size)
+BulkDmaSize:0                             ;  0:4K,1:8K,2:16K,3:32K (Application FW ONLY)
+MaxBurst:0xF                              ;     1-15 SS BULK Max Burst
+IsoPKTS:0                                 ;      0:1,1:2 ISO Mult settings for SS and HS
+IsoBurst:0                                ;     0:1,1:2,2:4,3:8 ISO Burst length in packets
+PollRate:1                                ;     0:1..15=16 ISO Endpoint poll rate
+IsoEpMap:0                                ;     0:EP1..3=Bulk,1:EP1=Iso,4:EP3=Iso,7:EP1..3=Iso
+ForceSpeed:0                              ;   0:GEN1,1:GEN2,2:HS,3:FS(Debug Port)+HS
+CyDriver:1                                ;     0:CyDriver,1:WinUSB (Application FW ONLY)
+EB_Depth:0xC                              ;     0=use RTL default, 1-15 elasticity buffer depth
+Lanes:0                                   ;        0:x1-PHY0, 1:x2-PHY0, 2:x1-PHY1, 3:x2-PHY1
+Silicon:1                                 ;      1:Silicon,0:PSVPD
+CC_DetEn:0                                ;     1:CC Enable,0:Disable

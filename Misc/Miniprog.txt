@@ -1,0 +1,13 @@
+MiniProg4 CMSIS-DAP BULK-0E1D0B2303210400 -- PSVP Setup
+MiniProg4 CMSIS-DAP BULK-1D1D0A2303210400 -- FX10 Setup
+
+openocd.exe -s ../scripts -f interface/kitprog3.cfg -c "cmsis_dap_serial 0E1D0B2303210400" -f target/fx3g2.cfg -c "program ./out/usbss_uvc.hex verify reset;exit"
+
+
+openocd.exe -s ../scripts -f interface/kitprog3.cfg -c "cmsis_dap_serial 1D1D0A2303210400" -f target/fx3g2.cfg -c "program ./out/fx3g2_lvds.hex verify reset;exit"
+
+openocd.exe -s ../scripts -f interface/kitprog3.cfg -c "cmsis_dap_serial 0E1D0B2303210400" -f target/fx3g2.cfg -c "program ./out/fx3g2_lvds_link_loopback.hex verify reset;exit"
+
+openocd.exe -s ../scripts -f interface/kitprog3.cfg -c "cmsis_dap_serial 1D1D0A2303210400" -f target/fx3g2.cfg -c "program ./out/Burnin_fw_v1.7.5 (1).hex verify reset;exit"
+
+openocd.exe -s ../scripts -f interface/kitprog3.cfg -f target/fx3g2.cfg -c "program ./out/Burnin_fw.hex verify reset;exit"
