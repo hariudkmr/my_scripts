@@ -204,8 +204,7 @@ export sumobot_dir=C:/Work/Code/generic/sumobot
 alias sbot='cd $sumobot_dir'
 
 #flash commands
-export share_dir="C:/Work/Share/Zoho WorkDrive/My Folders/Work"
-export ascripts="C:/Work/Share/Zoho WorkDrive/My Folders/Work/Config/scripts"
+export ascripts=C:/cygwin64/home/udayakumar/Config/scripts
 alias flash='"$ascripts"/flash_hexfile.sh'
 
 #bash script editing shortcuts

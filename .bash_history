@@ -23,3 +23,7 @@ print $ascripts
 vi ~/.bashrc
 clear
 exit
+clear
+ebash
+vi /etc/nsswitch.conf 
+exit
